@@ -10,8 +10,18 @@ document.execCommand('paste');
 
 //fill link from input
 var myLink = document.getElementById('myLink');
+
+// //make sure the clipboard has a medium link in it
+// if (myLink.substring(0, 22) == "https://www.medium.com")
+// {
+//     debugger;
+
+// };
+
 myLink.setAttribute("href", myInput.value.split('?')[0]);
 myLink.click();
+
+
 
 
 
