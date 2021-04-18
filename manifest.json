@@ -1,10 +1,12 @@
 {
     "manifest_version": 2,
-    "name": "Articles",
+    "name": "Med",
     "version": "0.001",
     "permissions": [
         "clipboardRead",
-        "contextMenus"
+        "clipboardWrite",
+        "contextMenus",
+        "https://medium.com/"
     ],
 
     "content_scripts": [
@@ -12,13 +14,13 @@
             "matches": [
                 "https://t.co/"
             ],
-            "js": ["content.js"]
+            "js": ["tco.js"]
         },
         {
             "matches": [
-                "https://www.medium.com/","https://medium.com/"
+                "https://medium.com/*","https://*.medium.com/*"
             ],
-            "js": ["content2.js"]
+            "js": ["med.js"]
         }
     ]
 
